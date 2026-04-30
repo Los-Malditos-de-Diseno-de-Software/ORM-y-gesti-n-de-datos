@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Implementación de ORM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .step-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #3b82f6;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .step-line::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-16 px-6 text-center shadow-2xl">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-blue-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Informe Técnico 2026</span>
+            <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-6 leading-tight">Implementación de ORM y Gestión de Datos</h1>
+            <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+                Una mirada profunda a la arquitectura de software moderna utilizando Entity Framework y metodologías iterativas.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700">
+                    <i class="fas fa-users text-blue-400"></i> Grupo Continental
+                </span>
+                <span class="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700">
+                    <i class="fas fa-chalkboard-teacher text-blue-400"></i> Docente: Hugo Espetia
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Introducción -->
+        <section class="mb-20">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm">01</span>
+                        Introducción
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        El proyecto se centra en la optimización del acceso a datos mediante el uso de **Mapeo Objeto-Relacional (ORM)**. Al separar las responsabilidades del sistema en capas, se logra una arquitectura más limpia, escalable y fácil de mantener.
+                    </p>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
+                        <i class="fas fa-layer-group text-3xl text-blue-500 mb-3"></i>
+                        <h3 class="font-semibold">Arquitectura</h3>
+                        <p class="text-xs text-slate-500">Separación por Capas</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center card-hover">
+                        <i class="fas fa-database text-3xl text-indigo-500 mb-3"></i>
+                        <h3 class="font-semibold">Eficiencia</h3>
+                        <p class="text-xs text-slate-500">Consultas con LINQ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herramientas -->
+        <section class="mb-20 bg-blue-50 -mx-6 px-6 py-16 rounded-3xl md:rounded-[4rem]">
+            <h2 class="text-3xl font-bold text-center mb-12">Stack Tecnológico</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Herramienta 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Entity Framework</h3>
+                    <p class="text-slate-600 text-sm">Simplifica la interacción con la BD mediante el mapeo de tablas a objetos de C#.</p>
+                </div>
+                <!-- Herramienta 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-slate-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-slate-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">SQL Server</h3>
+                    <p class="text-slate-600 text-sm">Motor de base de datos robusto para el almacenamiento y gestión de la persistencia.</p>
+                </div>
+                <!-- Herramienta 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fab fa-git-alt text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Git / GitHub</h3>
+                    <p class="text-slate-600 text-sm">Control de versiones fundamental para el desarrollo colaborativo y trazabilidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modelo ER -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Modelo Entidad - Relación</h2>
+            <div class="bg-white p-4 md:p-8 rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="flex flex-col md:flex-row justify-around items-center gap-8 relative py-8">
+                    <!-- Tabla 1 -->
+                    <div class="w-full md:w-64 bg-slate-800 text-white rounded-lg overflow-hidden border-2 border-blue-500 shadow-lg">
+                        <div class="bg-blue-600 p-2 font-bold text-center">Entidad: Categoria</div>
+                        <div class="p-4 space-y-2 text-sm font-mono">
+                            <div class="flex justify-between"><span>PK: Id</span> <span class="text-blue-300">int</span></div>
+                            <div class="flex justify-between"><span>Nombre</span> <span class="text-blue-300">string</span></div>
+                            <div class="flex justify-between"><span>Descripcion</span> <span class="text-blue-300">string</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conector -->
+                    <div class="hidden md:block text-slate-300">
+                        <i class="fas fa-link text-4xl"></i>
+                    </div>
+
+                    <!-- Tabla 2 -->
+                    <div class="w-full md:w-64 bg-slate-800 text-white rounded-lg overflow-hidden border-2 border-indigo-500 shadow-lg">
+                        <div class="bg-indigo-600 p-2 font-bold text-center">Entidad: Articulo</div>
+                        <div class="p-4 space-y-2 text-sm font-mono">
+                            <div class="flex justify-between"><span>PK: Id</span> <span class="text-indigo-300">int</span></div>
+                            <div class="flex justify-between"><span>FK: CatId</span> <span class="text-orange-300">int</span></div>
+                            <div class="flex justify-between"><span>Codigo</span> <span class="text-indigo-300">string</span></div>
+                            <div class="flex justify-between"><span>Precio</span> <span class="text-indigo-300">decimal</span></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-slate-500 italic mt-6">Mapeo de relaciones complejas y propiedades de navegación automatizadas.</p>
+            </div>
+        </section>
+
+        <!-- Desarrollo Iterativo -->
+        <section class="mb-20 relative">
+            <h2 class="text-3xl font-bold mb-12 text-center">Fases de Desarrollo (Commits)</h2>
+            <div class="step-line relative">
+                <!-- Fase 1 -->
+                <div class="flex flex-col md:flex-row items-center mb-16 gap-8 relative">
+                    <div class="md:w-1/2 md:text-right">
+                        <h3 class="text-xl font-bold text-blue-600">Fase 1: Configuración</h3>
+                        <p class="text-slate-600">Inicialización del ORM y estructura de la base de datos.</p>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-600 rounded-full border-4 border-white shadow flex items-center justify-center text-white z-10">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+
+                <!-- Fase 2 -->
+                <div class="flex flex-col md:flex-row items-center mb-16 gap-8 relative">
+                    <div class="md:w-1/2"></div>
+                    <div class="w-12 h-12 bg-indigo-600 rounded-full border-4 border-white shadow flex items-center justify-center text-white z-10">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="md:w-1/2 text-left">
+                        <h3 class="text-xl font-bold text-indigo-600">Fase 2: Conexión</h3>
+                        <p class="text-slate-600">Capa de presentación y enlace con la lógica de negocio.</p>
+                    </div>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="flex flex-col md:flex-row items-center mb-4 gap-8 relative">
+                    <div class="md:w-1/2 md:text-right">
+                        <h3 class="text-xl font-bold text-emerald-600">Fase 3: CRUD Completo</h3>
+                        <p class="text-slate-600">Implementación de operaciones: Crear, Leer, Actualizar y Eliminar.</p>
+                    </div>
+                    <div class="w-12 h-12 bg-emerald-600 rounded-full border-4 border-white shadow flex items-center justify-center text-white z-10">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones -->
+        <section class="bg-slate-900 text-white p-10 rounded-3xl shadow-2xl">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i class="fas fa-graduation-cap text-yellow-500"></i> Conclusiones
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="border-l-4 border-blue-500 pl-6 py-2">
+                    <h4 class="font-bold text-blue-400 mb-2">Simplificación</h4>
+                    <p class="text-slate-400 text-sm">Entity Framework facilitó la interacción mediante LINQ, reduciendo la necesidad de SQL crudo.</p>
+                </div>
+                <div class="border-l-4 border-indigo-500 pl-6 py-2">
+                    <h4 class="font-bold text-indigo-400 mb-2">Organización</h4>
+                    <p class="text-slate-400 text-sm">La arquitectura en capas permitió una separación clara entre la lógica y los datos.</p>
+                </div>
+                <div class="border-l-4 border-orange-500 pl-6 py-2">
+                    <h4 class="font-bold text-orange-400 mb-2">Desafíos</h4>
+                    <p class="text-slate-400 text-sm">Las relaciones complejas y claves foráneas requirieron ajustes manuales en el Fluent API.</p>
+                </div>
+                <div class="border-l-4 border-emerald-500 pl-6 py-2">
+                    <h4 class="font-bold text-emerald-400 mb-2">Control</h4>
+                    <p class="text-slate-400 text-sm">El uso disciplinado de Git garantizó un avance organizado y sin pérdida de información.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-12 text-slate-500 text-sm border-t border-slate-200">
+        <p>Integrantes: Chavez Huanca, Huillca Rodriguez, Luna Lezano, Galdos Pantani</p>
+        <p class="mt-2">&copy; 2026 Universidad Continental - Facultad de Ingeniería</p>
+    </footer>
+
+</body>
+</html>
