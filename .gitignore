@@ -1,0 +1,9 @@
+# Archivos y carpetas a ignorar
+bin/
+obj/
+*.user
+*.suo
+.vs/
+Debug/
+Release/
+*.log

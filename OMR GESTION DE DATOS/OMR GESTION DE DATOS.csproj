@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A13DFE41-534A-49C3-A7A0-0D2F5EB279B8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OMR_GESTION_DE_DATOS</RootNamespace>
+    <AssemblyName>OMR GESTION DE DATOS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consultas Pubs\Consultas basicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas Pubs\Consultas basicas.Designer.cs">
+      <DependentUpon>Consultas basicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas Pubs\pubsentities1.cs" />
+    <Compile Include="Modelos\Alphabetical_list_of_products.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\authors.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Categories.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Category_Sales_for_1997.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Current_Product_List.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\CustomerDemographics.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Customers.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Customer_and_Suppliers_by_City.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\CustOrderHist_Result.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\CustOrdersDetail_Result.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\CustOrdersOrders_Result.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\discounts.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\employee.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Employees.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Employee_Sales_by_Country_Result.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Invoices.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\jobs.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\northwind.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>northwind.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\northwind.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\northwind.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>northwind.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Orders.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Orders_Qry.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Order_Details.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Order_Details_Extended.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Order_Subtotals.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Products.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Products_Above_Average_Price.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Products_by_Category.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Product_Sales_for_1997.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\publishers.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pubs.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pubs.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pubs.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Pubs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pubs.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\pub_info.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Region.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\reptq1_Result.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\reptq2_Result.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\reptq3_Result.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\roysched.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\sales.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\SalesByCategory_Result.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Sales_by_Category.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Sales_by_Year_Result.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Sales_Totals_by_Amount.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Shippers.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\stores.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Summary_of_Sales_by_Quarter.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Summary_of_Sales_by_Year.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Suppliers.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Ten_Most_Expensive_Products_Result.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Territories.cs">
+      <DependentUpon>northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas northwind\Consultas Avanzadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas northwind\Consultas Avanzadas.Designer.cs">
+      <DependentUpon>Consultas Avanzadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas northwind\Consultas Básicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas northwind\Consultas Básicas.Designer.cs">
+      <DependentUpon>Consultas Básicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas northwind\Consultas Intermedias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas northwind\Consultas Intermedias.Designer.cs">
+      <DependentUpon>Consultas Intermedias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\titleauthor.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\titles.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\titleview.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Consultas northwind\Consultas Básicas.resx">
+      <DependentUpon>Consultas Básicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas northwind\Consultas Intermedias.resx">
+      <DependentUpon>Consultas Intermedias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas Pubs\Consultas basicas.resx">
+      <DependentUpon>Consultas basicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Modelos\northwind.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>northwind.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelos\northwind.edmx.diagram">
+      <DependentUpon>northwind.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Modelos\Pubs.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Pubs.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelos\Pubs.edmx.diagram">
+      <DependentUpon>Pubs.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelos\northwind.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>northwind.edmx</DependentUpon>
+      <LastGenOutput>northwind.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelos\northwind.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>northwind.edmx</DependentUpon>
+      <LastGenOutput>northwind.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelos\Pubs.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Pubs.edmx</DependentUpon>
+      <LastGenOutput>Pubs.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelos\Pubs.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Pubs.edmx</DependentUpon>
+      <LastGenOutput>Pubs.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
