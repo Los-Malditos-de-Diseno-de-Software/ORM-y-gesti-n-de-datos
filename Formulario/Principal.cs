@@ -23,7 +23,7 @@ namespace Formulario
         {
             // Instanciamos el formulario de Consultas Básicas
             Consultas_Básicas frmBasicas = new Consultas_Básicas();
-
+            
             // Lo mostramos (Show permite navegar en ambos formularios a la vez)
             frmBasicas.Show();
         }
@@ -68,6 +68,15 @@ namespace Formulario
 
             // Lo mostramos
             frmIntermedias.Show();
+        }
+
+        private void cONSULTASAVANZADASToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            // Instanciamos el formulario de Consultas Avanzadas
+            Consultas_avanzadas frmAvanzadas = new Consultas_avanzadas();
+
+            // Lo mostramos
+            frmAvanzadas.Show();
         }
     }
 }

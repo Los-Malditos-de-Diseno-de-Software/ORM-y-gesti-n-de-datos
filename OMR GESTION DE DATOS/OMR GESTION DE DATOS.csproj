@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas Pubs\Consultas avanzadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas Pubs\Consultas avanzadas.Designer.cs">
+      <DependentUpon>Consultas avanzadas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas Pubs\Consultas basicas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,11 +272,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Consultas northwind\Consultas Avanzadas.resx">
+      <DependentUpon>Consultas Avanzadas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas northwind\Consultas Básicas.resx">
       <DependentUpon>Consultas Básicas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas northwind\Consultas Intermedias.resx">
       <DependentUpon>Consultas Intermedias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas Pubs\Consultas avanzadas.resx">
+      <DependentUpon>Consultas avanzadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas Pubs\Consultas basicas.resx">
       <DependentUpon>Consultas basicas.cs</DependentUpon>
