@@ -16,7 +16,7 @@ namespace OMR_GESTION_DE_DATOS.Consultas_Pubs
     public partial class Consultas_basicas : Form
     {
         private object Pubs;
-        pubsentities1 bdpubs = new pubsentities1();
+        pubsEntities2 bdpubs = new pubsEntities2();
 
         public Consultas_basicas()
         {
@@ -26,8 +26,32 @@ namespace OMR_GESTION_DE_DATOS.Consultas_Pubs
         private void btnautores_Click(object sender, EventArgs e)
         {
             // Comsultar los procuctos de la BD Ventas
-            var consulta = from A in bdpubs.
+            var consulta = from A in bdpubs.authors
                            select A;
+            dgvconsultas.DataSource = consulta.ToList();
+        }
+
+        private void btnempleados_Click(object sender, EventArgs e)
+        {
+            // Comsultar los procuctos de la BD Ventas
+            var consulta = from E in bdpubs.employee
+                           select E;
+            dgvconsultas.DataSource = consulta.ToList();
+        }
+
+        private void btntiendas_Click(object sender, EventArgs e)
+        {
+            // Comsultar los procuctos de la BD Ventas
+            var consulta = from T in bdpubs.stores
+                           select T;
+            dgvconsultas.DataSource = consulta.ToList();
+        }
+
+        private void btnventas_Click(object sender, EventArgs e)
+        {
+            // Comsultar los procuctos de la BD Ventas
+            var consulta = from V in bdpubs.sales
+                           select V;
             dgvconsultas.DataSource = consulta.ToList();
         }
     }

@@ -54,6 +54,7 @@
             this.btnempleados.TabIndex = 1;
             this.btnempleados.Text = "listar empleados";
             this.btnempleados.UseVisualStyleBackColor = true;
+            this.btnempleados.Click += new System.EventHandler(this.btnempleados_Click);
             // 
             // btntiendas
             // 
@@ -63,6 +64,7 @@
             this.btntiendas.TabIndex = 2;
             this.btntiendas.Text = "listar tiendas";
             this.btntiendas.UseVisualStyleBackColor = true;
+            this.btntiendas.Click += new System.EventHandler(this.btntiendas_Click);
             // 
             // btnventas
             // 
@@ -72,13 +74,14 @@
             this.btnventas.TabIndex = 3;
             this.btnventas.Text = "listar ventas";
             this.btnventas.UseVisualStyleBackColor = true;
+            this.btnventas.Click += new System.EventHandler(this.btnventas_Click);
             // 
             // dgvconsultas
             // 
             this.dgvconsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvconsultas.Location = new System.Drawing.Point(122, 221);
+            this.dgvconsultas.Location = new System.Drawing.Point(34, 136);
             this.dgvconsultas.Name = "dgvconsultas";
-            this.dgvconsultas.Size = new System.Drawing.Size(625, 150);
+            this.dgvconsultas.Size = new System.Drawing.Size(738, 302);
             this.dgvconsultas.TabIndex = 4;
             // 
             // Consultas_basicas
@@ -92,7 +95,7 @@
             this.Controls.Add(this.btnempleados);
             this.Controls.Add(this.btnautores);
             this.Name = "Consultas_basicas";
-            this.Text = "Consultas_basicas";
+            this.Text = "Consultas Básicas-Pubs";
             ((System.ComponentModel.ISupportInitialize)(this.dgvconsultas)).EndInit();
             this.ResumeLayout(false);
 

@@ -1,4 +1,5 @@
 ﻿using OMR_GESTION_DE_DATOS.Capa_de_presentación;
+using OMR_GESTION_DE_DATOS.Consultas_Pubs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -93,6 +93,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Consultas_Básicas";
+            this.Text = "Consultas Básicas-Northwind";
             ((System.ComponentModel.ISupportInitialize)(this.dgvconsultas)).EndInit();
             this.ResumeLayout(false);
 

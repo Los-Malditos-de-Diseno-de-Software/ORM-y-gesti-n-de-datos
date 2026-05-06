@@ -59,6 +59,12 @@
     <Compile Include="Consultas Pubs\Consultas basicas.Designer.cs">
       <DependentUpon>Consultas basicas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas Pubs\Consultas intermedias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas Pubs\Consultas intermedias.Designer.cs">
+      <DependentUpon>Consultas intermedias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas Pubs\pubsentities1.cs" />
     <Compile Include="Modelos\Alphabetical_list_of_products.cs">
       <DependentUpon>northwind.tt</DependentUpon>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas Pubs\Consultas basicas.resx">
       <DependentUpon>Consultas basicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas Pubs\Consultas intermedias.resx">
+      <DependentUpon>Consultas intermedias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

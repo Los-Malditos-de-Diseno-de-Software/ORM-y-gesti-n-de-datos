@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="Formulario/Capa de presentacion.csproj" />
-  <Project Path="OMR GESTION DE DATOS/OMR GESTION DE DATOS.csproj" />
+  <Project Path="Formulario/Capa de presentacion.csproj" Id="3d802578-f678-4aae-8754-2492681a7446" />
+  <Project Path="OMR GESTION DE DATOS/OMR GESTION DE DATOS.csproj" Id="a13dfe41-534a-49c3-a7a0-0d2f5eb279b8" />
 </Solution>
