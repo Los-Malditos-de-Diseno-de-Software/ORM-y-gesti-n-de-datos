@@ -35,6 +35,8 @@
             this.txtempleados = new System.Windows.Forms.TextBox();
             this.txttrabajos = new System.Windows.Forms.TextBox();
             this.dgvconsulta = new System.Windows.Forms.DataGridView();
+            this.btntiendass = new System.Windows.Forms.Button();
+            this.txttiendas1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvconsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +48,7 @@
             this.btntiendas.TabIndex = 13;
             this.btntiendas.Text = "buscar tiendas";
             this.btntiendas.UseVisualStyleBackColor = true;
+            this.btntiendas.Click += new System.EventHandler(this.btntiendas_Click);
             // 
             // button2
             // 
@@ -55,6 +58,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "buscar empleados";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btntrabajos
             // 
@@ -96,11 +100,30 @@
             this.dgvconsulta.TabIndex = 7;
             this.dgvconsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvconsulta_CellContentClick);
             // 
+            // btntiendass
+            // 
+            this.btntiendass.Location = new System.Drawing.Point(215, 164);
+            this.btntiendass.Name = "btntiendass";
+            this.btntiendass.Size = new System.Drawing.Size(172, 23);
+            this.btntiendass.TabIndex = 14;
+            this.btntiendass.Text = "buscar tiendas con inicial";
+            this.btntiendass.UseVisualStyleBackColor = true;
+            this.btntiendass.Click += new System.EventHandler(this.btntiendass_Click);
+            // 
+            // txttiendas1
+            // 
+            this.txttiendas1.Location = new System.Drawing.Point(29, 166);
+            this.txttiendas1.Name = "txttiendas1";
+            this.txttiendas1.Size = new System.Drawing.Size(100, 20);
+            this.txttiendas1.TabIndex = 15;
+            // 
             // Consultas_intermedias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txttiendas1);
+            this.Controls.Add(this.btntiendass);
             this.Controls.Add(this.btntiendas);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btntrabajos);
@@ -126,5 +149,7 @@
         private System.Windows.Forms.TextBox txtempleados;
         private System.Windows.Forms.TextBox txttrabajos;
         private System.Windows.Forms.DataGridView dgvconsulta;
+        private System.Windows.Forms.Button btntiendass;
+        private System.Windows.Forms.TextBox txttiendas1;
     }
 }

@@ -53,5 +53,74 @@ namespace OMR_GESTION_DE_DATOS.Consultas_Pubs
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string empleadosBusqueda = this.txtempleados.Text.Trim();
+            using (pubsEntities2 empleados = new pubsEntities2())
+            {
+                // La consulta busca cualquier apellido que CONTENGA la cadena ingresada
+                var consulta = from E in empleados.employee
+                               where E.emp_id.Contains(empleadosBusqueda)
+                               select new
+                               {
+                                   E.emp_id,
+                                   E.fname,
+                                   E.lname,
+                                   E.minit,
+                                   E.hire_date
+                               };
+
+                dgvconsulta.DataSource = consulta.ToList();
+
+            }
+        }
+
+        private void btntiendas_Click(object sender, EventArgs e)
+        {
+            string tiendasBusqueda = this.txttiendas.Text.Trim();
+            using (pubsEntities2 tiendas = new pubsEntities2())
+            {
+                // La consulta busca cualquier apellido que CONTENGA la cadena ingresada
+                var consulta = from T in tiendas.stores
+                               where T.stor_name.Contains(tiendasBusqueda)
+                               select new
+                               {
+                                   T.stor_id,
+                                   T.stor_name,
+                                   T.stor_address,
+                                   T.city,
+                                   T.state,
+                                   T.zip
+                               };
+
+                dgvconsulta.DataSource = consulta.ToList();
+
+            }
+        }
+
+        private void btntiendass_Click(object sender, EventArgs e)
+        {
+            string tiendasBusqueda = this.txttiendas1.Text.Trim();
+
+            using (pubsEntities2 tiendas = new pubsEntities2())
+            {
+                // Cambiamos .Contains por .StartsWith para buscar solo al inicio
+                var consulta = from T in tiendas.stores
+                               where T.stor_name.StartsWith(tiendasBusqueda)
+                               select new
+                               {
+                                   T.stor_id,
+                                   T.stor_name,
+                                   T.stor_address,
+                                   T.city,
+                                   T.state,
+                                   T.zip
+                               };
+
+                dgvconsulta.DataSource = consulta.ToList();
+            }
+
+        }
     }
 }
